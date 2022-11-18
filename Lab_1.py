@@ -1,4 +1,4 @@
-# Laboratory job #1.
+# Laboratory job Basics
 
 # Data types, input/ output, calculations, Math module.
 
