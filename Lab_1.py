@@ -8,13 +8,13 @@ import math
 
 # Shortest distance between a lifeguard and a waterline, yards.
 distLifeguardWater = input("Enter a shortest distance between the Lifeguard and waterline in yards: ")
-d1 = float(distLifeguardWater) / 3  # convert to feet.
+d1 = float(distLifeguardWater) * 3  # convert to feet.
 # Shortest distance between a waterline and a drowning, feet.
 distWaterSurvivor = input("Enter a shortest distance between the drowning man and waterline in feet: ")
 d2 = float(distWaterSurvivor)   # in feet.
 # Side offset along waterline between a lifeguard and a drowning, yards.
 offset = input("Enter a side offset along waterline between a lifeguard and a drowning in yards: ")
-h = float(offset) / 3   # convert to feet.
+h = float(offset) * 3   # convert to feet.
 # Velocity through the sand, mph.
 velocitySand = input("Enter a lifeguard speed running in sand, mph: ")
 vs = float(velocitySand) * 5280/3600    # convert to feet per seconds.
