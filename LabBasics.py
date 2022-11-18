@@ -4,24 +4,19 @@
 
 import math
 
+# Constants
+FEETperYARD = 3
+FEETperMILE = 5280
+SECperHOUR = 3600
+
 # Data input
 
-# Shortest distance between a lifeguard and a waterline, yards.
-distLifeguardWater = input("Enter a shortest distance between the Lifeguard and waterline in yards: ")
-d1 = float(distLifeguardWater) * 3  # convert to feet.
-# Shortest distance between a waterline and a drowning, feet.
-distWaterSurvivor = input("Enter a shortest distance between the drowning man and waterline in feet: ")
-d2 = float(distWaterSurvivor)   # in feet.
-# Side offset along waterline between a lifeguard and a drowning, yards.
-offset = input("Enter a side offset along waterline between a lifeguard and a drowning in yards: ")
-h = float(offset) * 3   # convert to feet.
-# Velocity through the sand, mph.
-velocitySand = input("Enter a lifeguard speed running in sand, mph: ")
-vs = float(velocitySand) * 5280/3600    # convert to feet per seconds. Speed through sand.
-# Lifeguard slow down coefficient in the water, n.
+d1 = float(input("Enter a shortest distance between the Lifeguard and waterline in yards: ")) * FEETperYARD
+d2 = float(input("Enter a shortest distance between the drowning man and waterline in feet: "))
+h = float(input("Enter a side offset along waterline between a lifeguard and a drowning in yards: ")) * FEETperYARD
+vs = float(input("Enter a lifeguard speed running in sand, mph: ")) * FEETperMILE / SECperHOUR
 coefSlowDownWater = int(input("Enter a coefficient of lifeguard slowing down in the water, n: "))
-# Running over the sand direction, °.
-directionSand = input("Enter an angle of running through the sand direction, °: ")
+directionSand = input("Enter an angle of running over the sand direction, °: ")
 theta1 = float(directionSand) * math.pi / 180   # convert to rad.
 
 # Calculations
@@ -34,4 +29,4 @@ timeSalvage = (L1 + L2 * coefSlowDownWater) / vs
 # Output result
 
 print(f'If a lifeguard runs at the angle of 𝜃1 = {round(float(directionSand))}',
-      f', he will reach the drowning in {timeSalvage:0.1f} seconds.')
+      f', he will reach a drowning in {timeSalvage:0.1f} seconds.')
