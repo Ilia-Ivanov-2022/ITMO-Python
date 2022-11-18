@@ -34,5 +34,5 @@ L2 = math.sqrt((h - x) ** 2 + d2 ** 2)  # distance between point of entry into w
 
 timeSalvage = (L1 + L2 * coefSlowDownWater) / vs
 
-print(f'If a lifeguard runs at the angle of 𝜃1 = {directionSand}',
+print(f'If a lifeguard runs at the angle of 𝜃1 = {round(float(directionSand))}',
       f', he will reach the drowning in {timeSalvage:0.1f} seconds.')
