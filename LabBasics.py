@@ -5,16 +5,16 @@
 import math
 
 # Constants
-FEETperYARD = 3
-FEETperMILE = 5280
-SECperHOUR = 3600
+FEET_PER_YARD = 3
+FEET_PER_MILE = 5280
+SEC_PER_HOUR = 3600
 
 # Data input
 
-d1 = float(input("Enter a shortest distance between the Lifeguard and waterline in yards: ")) * FEETperYARD
+d1 = float(input("Enter a shortest distance between the Lifeguard and waterline in yards: ")) * FEET_PER_YARD
 d2 = float(input("Enter a shortest distance between the drowning man and waterline in feet: "))
-h = float(input("Enter a side offset along waterline between a lifeguard and a drowning in yards: ")) * FEETperYARD
-vs = float(input("Enter a lifeguard speed running in sand, mph: ")) * FEETperMILE / SECperHOUR
+h = float(input("Enter a side offset along waterline between a lifeguard and a drowning in yards: ")) * FEET_PER_YARD
+vs = float(input("Enter a lifeguard speed running in sand, mph: ")) * FEET_PER_MILE / SEC_PER_HOUR
 coefSlowDownWater = int(input("Enter a coefficient of lifeguard slowing down in the water, n: "))
 directionSand = input("Enter an angle of running over the sand direction, °: ")
 theta1 = float(directionSand) * math.pi / 180   # convert to rad.
