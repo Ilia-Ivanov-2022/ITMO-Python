@@ -8,7 +8,7 @@ data types, input/ output, calculations, Math module.
 Controller module: invokes methods and procedures in 'view' and 'model' modules.
 """
 
-from survivor import survivor_view, survivor_model
+import survivor_view, survivor_model
 # gets data from a user and stores in tuple
 survivor_model.model_data = survivor_view.input_data()
 # calculates results with above tuple as an argument
