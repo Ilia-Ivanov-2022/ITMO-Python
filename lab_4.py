@@ -39,6 +39,13 @@ for i in range(5):
 
 # Found out the final winner
 if win_igrok1 > win_igrok2:
-	print(f"{igrok1} won {win_igrok1} times with total score of {score_igrok2}")
-else:
-	print(f"{igrok2} 1 won {win_igrok2} times with total score of {score_igrok1}")
+	print(f"По результатам сета выиграл {igrok1} {win_igrok1} раз,"
+		  f" с общим счетом {score_igrok1}")
+elif win_igrok2 > win_igrok1:
+	print(f"По результатам сета выиграл {igrok2} {win_igrok2} раз,"
+		  f" с общим счетом {score_igrok2}")
+elif win_igrok1 == win_igrok2 and score_igrok1 > score_igrok2:
+	print(f"По результатам сета выиграл {igrok1}"
+		  f" по разнице в счете {score_igrok1 - score_igrok2}")
+else: print(f"По результатам сета выиграл {igrok2}"
+		  f" по разнице в счете {score_igrok2 - score_igrok1}")
