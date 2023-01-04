@@ -39,6 +39,6 @@ for i in range(5):
 
 # Found out the final winner
 if win_igrok1 > win_igrok2:
-	print(f"Player 1 won {win_igrok1} times with total score of {score_igrok2}")
+	print(f"{igrok1} won {win_igrok1} times with total score of {score_igrok2}")
 else:
-	print(f"Player 1 won {win_igrok2} times with total score of {score_igrok1}")
+	print(f"{igrok2} 1 won {win_igrok2} times with total score of {score_igrok1}")
